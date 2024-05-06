@@ -61,6 +61,18 @@ PlasmoidItem {
 
         RowLayout{
             Layout.fillWidth: true
+
+            PlasmaComponents3.Button {
+                // icon.name: "Go Home"
+                text: i18nc("@action:button", "Go Home")
+
+                onClicked:{
+                    var braveurl = 'https://search.brave.com/'
+                    gptWebView.url = braveurl ;
+                }
+            }
+
+
             PlasmaComponents3.Button {
                 icon.name: "go-previous"
                 onClicked: gptWebView.goBack()
@@ -78,15 +90,7 @@ PlasmoidItem {
 
 
 
-             PlasmaComponents3.Button {
-                // icon.name: "Go Home"
-                text: i18nc("@action:button", "Go Home")
 
-                onClicked:{
-                    var braveurl = 'https://search.brave.com/'
-                    gptWebView.url = braveurl ;
-                }
-            }
 
             PlasmaComponents3.TextField {
                 Layout.fillWidth: true
