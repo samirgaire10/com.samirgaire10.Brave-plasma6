@@ -60,7 +60,7 @@ PlasmoidItem {
         Layout.minimumHeight: root.switchHeight
 
         RowLayout{
-            Layout.fillWidth: true
+            Layout.fillWidth: true      
             PlasmaComponents3.Button {
                 icon.name: "go-previous"
                 onClicked: gptWebView.goBack()
