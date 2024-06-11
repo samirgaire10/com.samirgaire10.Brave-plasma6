@@ -250,6 +250,22 @@ PlasmoidItem {
 
                 readonly property bool useMinViewWidth : plasmoid.configuration.useMinViewWidth
 
+
+
+  WebEngineProfile {
+            id: braveProfile
+            httpUserAgent: getUserAgent()
+            storageName: "brave"
+            offTheRecord: false
+            httpCacheType: WebEngineProfile.DiskHttpCache
+            persistentCookiesPolicy: WebEngineProfile.ForcePersistentCookies
+        }
+
+        profile: braveProfile
+
+
+
+
                 Connections {
                     target: plasmoid.configuration
 
